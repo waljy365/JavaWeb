@@ -1,0 +1,19 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class BaseExecutor
+class BatchExecutor
+class CachingExecutor
+interface Executor << interface >>
+class ReuseExecutor
+class SimpleExecutor
+
+BaseExecutor     -[#008200,dashed]-^  Executor        
+BatchExecutor    -[#000082,plain]-^  BaseExecutor    
+CachingExecutor  -[#008200,dashed]-^  Executor        
+ReuseExecutor    -[#000082,plain]-^  BaseExecutor    
+SimpleExecutor   -[#000082,plain]-^  BaseExecutor    
+@enduml

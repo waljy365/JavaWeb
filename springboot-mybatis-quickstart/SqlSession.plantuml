@@ -1,0 +1,19 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class DefaultSqlSession
+class DefaultSqlSessionFactory
+interface SqlSession << interface >>
+interface SqlSessionFactory << interface >>
+class SqlSessionManager
+class SqlSessionTemplate
+
+DefaultSqlSession         -[#008200,dashed]-^  SqlSession               
+DefaultSqlSessionFactory  -[#008200,dashed]-^  SqlSessionFactory        
+SqlSessionManager         -[#008200,dashed]-^  SqlSession               
+SqlSessionManager         -[#008200,dashed]-^  SqlSessionFactory        
+SqlSessionTemplate        -[#008200,dashed]-^  SqlSession               
+@enduml
