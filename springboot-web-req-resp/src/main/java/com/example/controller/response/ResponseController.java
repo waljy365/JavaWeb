@@ -2,6 +2,7 @@ package com.example.controller.response;
 
 import com.example.domain.Address;
 import com.example.domain.Result;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
